@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake Frontend</title>
+    <script th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+    <script th:src="@{/index.js}"></script>
+</head>
+<body>
+<button onclick="getUserDetails()">user details</button>
+<!--/* 不能使用 AJAX 登出，會有 302 + CORS 錯誤 */-->
+<a href="http://localhost:8200/back/logout">logout</a>
+<div id="responseBody"></div>
+</body>
+</html>

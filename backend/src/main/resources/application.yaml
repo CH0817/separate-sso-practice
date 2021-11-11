@@ -2,3 +2,9 @@ server:
   port: 8200
   servlet:
     context-path: /back
+frontend-url: http://localhost:8100/front
+app:
+  login-url: http://localhost:${server.port}${server.servlet.context-path}/login/cas
+sso:
+  server-url: https://cas.example.org:8443/cas
+  logout-url: ${sso.server-url}/logout

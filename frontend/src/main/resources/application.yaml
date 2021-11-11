@@ -2,3 +2,6 @@ server:
   port: 8100
   servlet:
     context-path: /front
+spring:
+  thymeleaf:
+    cache: false
