@@ -1,0 +1,4 @@
+server:
+  port: 8200
+  servlet:
+    context-path: /back
