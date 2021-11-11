@@ -21,6 +21,8 @@
 
     <modules>
         <module>backend</module>
+        <module>frontend</module>
+        <module>gateway</module>
     </modules>
 
     <dependencyManagement>
