@@ -1,0 +1,18 @@
+server:
+  port: 8300
+spring:
+  cloud:
+    gateway:
+#      default-filters:
+#        - StripPrefix=1
+      routes:
+        - id: backend_route
+          uri: http://localhost:8200
+          predicates:
+            - Path=/back/**
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: trace
