@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -20,6 +21,14 @@ public class CustomerCasAuthenticationEntryPoint implements AuthenticationEntryP
                                final HttpServletResponse response,
                                final AuthenticationException authenticationException) {
         // 傳 401 回去，
+        Cookie[] cookies = request.getCookies();
+        System.out.println("========");
+        System.out.println(cookies.length);
+        for (Cookie cookie : cookies) {
+            System.out.println(cookie.getName());
+            System.out.println(cookie.getValue());
+        }
+        System.out.println("========");
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
     }
 
