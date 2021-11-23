@@ -7,9 +7,11 @@
     <script th:src="@{/index.js}"></script>
 </head>
 <body>
-<button onclick="getUserDetails()">user details</button>
+<button onclick="getApp1UserDetails()">APP1 user details</button>
+<button onclick="getApp2UserDetails()">APP2 user details</button>
 <!--/* 不能使用 AJAX 登出，會有 302 + CORS 錯誤 */-->
 <a href="http://localhost:8200/back/logout">logout</a>
 <div id="responseBody"></div>
+<div id="responseBody2"></div>
 </body>
 </html>
